@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi"> <!-- Ngôn ngữ hiển thị là tiếng Việt -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung tâm việc làm Vĩnh Long</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Liên kết đến file CSS ngoài -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Viết CSS nội tuyến (dành cho bố cục nhanh) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif; /* Font chữ dễ đọc */
+    }
+
+    header {
+      text-align: center; /* Căn giữa phần banner */
+    }
+
+    .banner {
+      width: 100%;
+      height: auto; /* Tự điều chỉnh chiều cao theo tỉ lệ ảnh */
+    }
+
+    /* Thanh menu chính (nền xanh, chữ trắng) */
+    .menu {
+      background-color: #007bff; /* Màu xanh dương */
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Liên kết trong menu */
+    #menu-links a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hotline {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    /* Phần giới thiệu chương trình học nghề */
+    .search {
+      text-align: center;
+      background-color: rgba(0, 123, 255, 0.1); /* Màu nền xanh nhạt */
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .search h2 {
+      margin: 10px 0;
+      color: #007bff;
+      font-size: 32px; /* Tăng kích thước chữ */
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #999; /* Đổ bóng nhẹ cho chữ */
+    }
+
+
+    /* Phần danh sách nghề */
+    .jobs {
+      background-color: #f0f0f0; /* Nền xám nhạt */
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Container chứa các thẻ nghề */
+    .job-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tự chia cột linh hoạt */
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Mỗi thẻ nghề (job card) */
+    .job-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Ảnh đại diện nghề */
+    .job-card img {
+      width: 100%;
+      height: 200px;         /* Chiều cao cố định */
+      object-fit: cover;     /* Giữ tỉ lệ ảnh, cắt cho đều */
+    }
+
+    .job-card h3, .job-card h4 {
+      margin: 10px;
+      font-size: 20px;
+      color: #007bff;        /* Màu xanh dương nổi bật */
+      font-weight: bold;
+    }
+
+    .job-card p {
+      margin: 5px 10px;
+    }
+
+    /* Bản đồ Google Maps */
+    .map iframe {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #007bff; /* Viền màu xanh */
+    }
+
+    /* Chân trang (footer) */
+    .footer-banner {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phần banner chính của trang -->
+ <header>
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <img src="images/banner.png" alt="Banner" class="banner">
+  </div>
+</header>
+
+  <!-- Thanh điều hướng menu và hotline -->
+  <nav class="menu">
+    <div id="menu-links">
+       <a href="nghề ngắn hạn.html">Trang chủ </a>
+      <a href="gioi thieu.html">Giới thiệu</a>
+    </div>	
+    <!-- Hotline dạng chạy ngang -->
+    <div class="hotline-bar">
+      <div class="hotline-text">Hotline: 0918.478.187 - 0848.478.187</div>
+    </div>
+  </nav>
+
+  <!-- Phần giới thiệu chương trình học miễn phí -->
+  <section class="search">
+    <h2>Đào tạo nghề ngắn hạn dưới 3 tháng</h2>
+    <h2>Miễn phí cho người lao động đang hưởng trợ cấp thất nghiệp</h2>
+  </section>
+
+  <!-- Danh sách nghề học -->
+ <main class="jobs">
+  <div class="job-container">
+    
+    <!-- Vận hành xe nâng hàng -->
+    <a href="van-hanh-xe-nang.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/1.png" alt="Vận hành xe nâng hàng">
+        <h3>Vận hành xe nâng hàng</h3>
+        <p><strong>Thời gian học:</strong> 2,5 tháng</p>
+        <p><strong>Học phí:</strong> 4.500.000 đồng</p>
+      </div>
+    </a>
+
+    <!-- Sửa chữa máy may công nghiệp -->
+    <a href="sua-chua-may-may.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/2.png" alt="Sửa chữa máy may công nghiệp">
+        <h3>Sửa chữa máy may công nghiệp</h3>
+        <p><strong>Thời gian học:</strong> 2,5 tháng</p>
+        <p><strong>Học phí:</strong> 4.500.000 đồng</p>
+      </div>
+    </a>
+
+    <!-- Cắt gọt kim loại (Tiện) -->
+    <a href="cat-got-kim-loai.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/3.png" alt="Cắt gọt kim loại">
+        <h3>Cắt gọt kim loại (Tiện)</h3>
+        <p><strong>Thời gian học:</strong> 2,5 tháng</p>
+        <p><strong>Học phí:</strong> 4.500.000 đồng</p>
+      </div>
+    </a>
+
+    <!-- Điện dân dụng -->
+    <a href="dien-dan-dung.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/4.png" alt="Điện dân dụng">
+        <h3>Điện dân dụng</h3>
+        <p><strong>Thời gian học:</strong> 2,5 tháng</p>
+        <p><strong>Học phí:</strong> 4.500.000 đồng</p>
+      </div>
+    </a>
+
+    <!-- Vận hành sửa chữa thiết bị lạnh -->
+    <a href="thiet-bi-lanh.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/5.png" alt="Thiết bị lạnh">
+        <h3>Vận hành sửa chữa thiết bị lạnh</h3>
+        <p><strong>Thời gian học:</strong> 2,5 tháng</p>
+        <p><strong>Học phí:</strong> 4.500.000 đồng</p>
+      </div>
+    </a>
+
+    <!-- Hàn -->
+    <a href="han.html" style="text-decoration: none; color: inherit;">
+      <div class="job-card">
+        <img src="images/6.png" alt="Hàn">
+        <h3>Hàn</h3>
+        <p><strong>Thời gian học:</strong> 1,5 tháng</p>
+        <p><strong>Học phí:</strong> 3.000.000 đồng</p>
+      </div>
+    </a>
+
+      <!-- Ô trống để căn đều lưới (có thể ẩn bằng CSS) -->
+      <div class="job-card empty"></div>
+
+  <a href="may-cong-nghiep.html" style="text-decoration: none; color: inherit;">
+  <div class="job-card">
+    <!-- Hình ảnh đại diện cho nghề -->
+    <img src="images/7.png" alt="May công nghiệp">
+
+    <!-- Tiêu đề nghề -->
+    <h3>May công nghiệp</h3>
+
+    <!-- Thông tin khóa học -->
+    <p><strong>Thời gian học:</strong> 1,5 tháng</p>
+    <p><strong>Học phí:</strong> 3.000.000 đồng</p>
+  </div>
+</a>
+      <div class="job-card empty"></div>
+      <div class="job-card empty"></div>
+    </div>
+  <!-- Chân trang -->
+<!-- Bản đồ vị trí việc làm tại Nhật Bản -->
+<section class="map map-box" style="background-color: rgba(0, 123, 255, 0.1); padding: 20px 0;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <!-- Tiêu đề bản đồ -->
+    <h2 style="
+      font-size: 36px; 
+      color: #007bff; 
+      text-shadow: 1px 1px 2px #999;
+      margin-bottom: 20px;
+    ">
+      Vị trí việc làm tại Nhật Bản
+    </h2>
+
+    <!-- Iframe nhúng bản đồ Google My Maps -->
+    <iframe 
+      src="https://www.google.com/maps/d/embed?mid=1rAUmCrZaeZV0_3_1fb4epq7YLeI-5sQ" 
+      width="100%" 
+      height="500" 
+      style="border: 2px solid #007bff; border-radius: 8px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- Phần chân trang -->
+<section class="footer-banner">
+  <h2>Trung tâm việc làm Vĩnh Long</h2>
+  <p>Số 55 Mậu Thân, Phường 3, TP. Vĩnh Long, tỉnh Vĩnh Long</p>
+  <p>Liên hệ ngay để được tư vấn nghề miễn phí!</p>
+</section>
+</body>
+</html>

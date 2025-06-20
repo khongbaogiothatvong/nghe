@@ -1,0 +1,234 @@
+/* === RESET MẶC ĐỊNH TOÀN TRANG === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif; /* Font dễ đọc, phổ biến */
+}
+
+/* === PHẦN BANNER CHÍNH TRANG === */
+header {
+  text-align: center; /* Căn giữa ảnh banner */
+}
+
+.banner {
+  width: 100%;
+  height: auto; /* Chiều cao tự động giữ tỉ lệ ảnh */
+  display: block;
+}
+
+/* === MENU ĐIỀU HƯỚNG === */
+.menu {
+  background-color: #007bff; /* Màu nền xanh dương */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Các liên kết trong menu */
+.menu a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === HOTLINE CHẠY NGANG === */
+.hotline-bar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #007bff;
+  height: 30px;
+  position: relative;
+}
+
+/* Chữ chạy ngang */
+.hotline-text {
+  white-space: nowrap;              /* Không cho xuống dòng */
+  display: inline-block;
+  color: red;                       /* Màu đỏ nổi bật */
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;                /* Căn giữa theo chiều cao */
+  padding-left: 100%;              /* Đẩy chữ ra ngoài phải trước khi chạy */
+  animation: scroll-left 15s linear infinite, glow 5s ease-in-out infinite;
+}
+
+/* === PHẦN GIỚI THIỆU CHƯƠNG TRÌNH HỌC === */
+.search {
+  text-align: center;
+  background-color: rgba(0, 123, 255, 0.1); /* Nền xanh nhạt */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề giới thiệu */
+.search h2 {
+  margin: 10px 0;
+  color: #007bff;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #999; /* Đổ bóng nhẹ */
+}
+
+/* === DANH SÁCH CÁC NGHỀ ĐÀO TẠO === */
+.jobs {
+  background-color: #f0f0f0; /* Màu nền xám nhạt */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Lưới chứa các nghề */
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Một thẻ nghề */
+.job-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Ảnh nghề */
+.job-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Cắt ảnh đẹp, không méo */
+}
+
+/* Tiêu đề nghề */
+.job-card h3 {
+  margin: 10px;
+  font-size: 20px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Mô tả nghề */
+.job-card p {
+  margin: 5px 10px;
+}
+
+/* Thẻ trống (ẩn đi để căn lưới đều) */
+.job-card.empty {
+  visibility: hidden;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* === BẢN ĐỒ VỊ TRÍ VIỆC LÀM TẠI NHẬT BẢN === */
+.map-box {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 123, 255, 0.1); /* ✅ Nền xanh nhạt */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Tiêu đề bản đồ */
+.map-box h2 {
+  font-size: 36px;
+  color: #007bff;
+  text-shadow: 1px 1px 2px #999;
+  margin-bottom: 20px;
+}
+
+/* Khung bản đồ */
+.map-box iframe {
+  width: 100%;
+  height: 500px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+}
+
+/* === CHÂN TRANG (FOOTER) === */
+.footer-banner {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === HIỆU ỨNG ANIMATION CHẠY NGANG & PHÁT SÁNG === */
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 2px #fff, 0 0 8px #f00; }
+  50%      { text-shadow: 0 0 4px #fff, 0 0 12px #ff0; }
+}
+
+/* === RESPONSIVE - TỰ ĐỘNG ĐIỀU CHỈNH TRÊN MOBILE === */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu a {
+    margin: 5px 0;
+  }
+
+  .hotline-text {
+    font-size: 18px;
+  }
+
+  .search h2,
+  .map-box h2 {
+    font-size: 24px;
+  }
+
+  .map-box iframe {
+    height: 300px;
+  }
+}
+.job-container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.image-row {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa hai ảnh */
+  margin: 20px 0;
+}
+
+.image-row img {
+  flex: 1;                  /* Mỗi ảnh chiếm đều chiều ngang */
+  height: 200px;            /* Chiều cao ảnh */
+  object-fit: cover;        /* Cắt ảnh cho đều */
+  border-radius: 8px;
+}
+.info-box {
+  background-color: #e6f2ff;      /* Màu xanh nhạt */
+  text-align: center;             /* Căn giữa */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 2px solid #007bff;      /* Viền xanh đậm */
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
