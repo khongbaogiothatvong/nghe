@@ -12,22 +12,22 @@
       color: #333;
     }
 
-  header {
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  border-bottom: 4px solid #0056b3;
-}
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      border-bottom: 4px solid #0056b3;
+    }
 
-header h2 {
-  font-size: 28px;          /* Tăng kích thước chữ */
-  font-weight: 700;         /* Đậm hơn bình thường */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Tô viền nhẹ */
-  margin: 0;
-}
+    header h2 {
+      font-size: 28px;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      margin: 0;
+    }
 
     main {
       max-width: 800px;
@@ -78,43 +78,30 @@ header h2 {
       border-radius: 8px;
     }
 
+    .info-box {
+      background-color: #e6f2ff;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      border: 2px solid #007bff;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.15);
+    }
+
     .back-link {
       display: inline-block;
       margin-top: 30px;
+      padding: 10px 20px;
       text-decoration: none;
-      color: #007bff;
+      color: white;
+      background-color: #007bff;
+      border-radius: 6px;
       font-weight: bold;
     }
 
     .back-link:hover {
-      text-decoration: underline;
+      background-color: #0056b3;
     }
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-
-  /* ... các style khác ... */
-
-  .back-link:hover {
-    text-decoration: underline;
-  }
-
-  /* ✅ Thêm đoạn này vào cuối */
-  .info-box {
-    background-color: #e6f2ff;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    border: 2px solid #007bff;
-    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.15);
-  }
-</style>
-
   </style>
 </head>
 <body>
@@ -124,27 +111,23 @@ header h2 {
 
   <main>
     <div class="info-box">
-  <h1>May công nghiệp</h1>
-</div>
+      <h1>May công nghiệp</h1>
+    </div>
 
-    <!-- 2 ảnh chính chia đều -->
     <div class="image-row">
       <img src="images/7.png" alt="May công nghiệp 1">
       <img src="images/may2.jpg" alt="May công nghiệp 2">
     </div>
 
-    <!-- Thư viện ảnh -->
     <div class="gallery">
       <img src="images/may-1.jpg" alt="May công nghiệp 3">
       <img src="images/may-2.jpg" alt="May công nghiệp 4">
       <img src="images/may-3.jpg" alt="May công nghiệp 5">
     </div>
 
-    <!-- Video YouTube minh họa -->
     <h2 style="margin-top: 30px;">Video giới thiệu khóa học</h2>
     <iframe src="https://www.youtube.com/embed/VoWwz0X9ZP4" allowfullscreen></iframe>
 
-    <!-- Nội dung mô tả -->
     <p>
       Khóa học <strong>May công nghiệp</strong> dành cho người lao động muốn học nghề may trong thời gian ngắn, áp dụng được ngay vào công việc tại xí nghiệp, công ty may mặc.
     </p>
@@ -155,11 +138,9 @@ header h2 {
       Trung tâm hỗ trợ 100% học phí cho người đang hưởng trợ cấp thất nghiệp.
     </p>
 
-    <!-- Khung đăng ký học -->
     <h2 style="margin-top: 40px; color: #007bff;">Đăng ký học nghề</h2>
     <p>Vui lòng điền thông tin vào biểu mẫu bên dưới để đăng ký tham gia khóa học may công nghiệp.</p>
 
-    <!-- Google Form -->
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSeA123456789abcDEFghijklmnopQRstuVWxyz/viewform?embedded=true" 
       height="800"
@@ -168,8 +149,9 @@ header h2 {
       Đang tải biểu mẫu…
     </iframe>
 
-    <!-- Liên kết quay lại -->
-    <a href="index.html" class="back-link">&larr; Quay lại trang chính</a>
+    <div style="text-align: center;">
+      <a href="index.html" class="back-link">&larr; Quay lại trang chính</a>
+    </div>
   </main>
 </body>
 </html>
